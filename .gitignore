@@ -1,0 +1,25 @@
+# Build artifacts
+node_modules/
+.next/
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temp
+tmp-*.png
+*.tmp
+.cache/
+
+# Sensitive
+.env
+.env.local
+.env.*.local
