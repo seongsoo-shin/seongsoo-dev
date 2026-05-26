@@ -462,6 +462,9 @@ html[data-lang="ko"] .proj-hero h1{font-weight:600;letter-spacing:-0.03em}
   transition:opacity .2s ease;
 }
 .gallery .shot:hover img{opacity:1}
+.localized-ko{display:none}
+html[data-lang="ko"] .localized-en{display:none!important}
+html[data-lang="ko"] .localized-ko{display:grid!important}
 .gallery .shot.cover-portrait,
 .gallery .shot.phone-portrait,
 .gallery .shot.store-portrait{
