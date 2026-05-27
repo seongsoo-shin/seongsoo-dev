@@ -23,3 +23,6 @@ tmp-*.png
 .env
 .env.local
 .env.*.local
+
+# Asset backup originals
+*.orig
