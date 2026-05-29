@@ -6,13 +6,17 @@
   // ───── mobile nav drawer ─────
   var navToggle = document.querySelector('.nav-toggle');
   var navEl = document.querySelector('header.top nav.nav');
+  var navMql = window.matchMedia('(max-width:780px)');
   function setNav(open){
     if (!navEl || !navToggle) return;
     navEl.classList.toggle('open', open);
+    if (navMql.matches) navEl.setAttribute('aria-hidden', open ? 'false' : 'true');
+    else navEl.removeAttribute('aria-hidden');
     navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.classList.toggle('nav-open', open);
   }
   if (navToggle && navEl){
+    setNav(false);
     navToggle.addEventListener('click', function(){
       var isOpen = navEl.classList.contains('open');
       setNav(!isOpen);
@@ -32,10 +36,9 @@
       setNav(false);
     });
     // close when resizing back to desktop
-    var mql = window.matchMedia('(max-width:780px)');
-    var onChange = function(){ if (!mql.matches) setNav(false); };
-    if (mql.addEventListener) mql.addEventListener('change', onChange);
-    else if (mql.addListener) mql.addListener(onChange);
+    var onChange = function(){ setNav(navEl.classList.contains('open') && navMql.matches); };
+    if (navMql.addEventListener) navMql.addEventListener('change', onChange);
+    else if (navMql.addListener) navMql.addListener(onChange);
   }
 
   // language toggle
