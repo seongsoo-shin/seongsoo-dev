@@ -192,7 +192,7 @@ nav.nav > a.active::after{
 
 @media (max-width:780px){
   .nav-toggle{display:inline-flex}
-  header.top .wrap{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+  header.top .wrap{padding-left:max(var(--pad),env(safe-area-inset-left));padding-right:max(var(--pad),env(safe-area-inset-right))}
   .top-row{padding:12px 0;gap:12px}
   .brand{gap:9px;font-size:12px}
   .brand .sep{margin:0 2px}
