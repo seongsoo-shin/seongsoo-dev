@@ -38,7 +38,7 @@ hr{border:0;border-top:1px solid var(--line-soft);margin:0}
 /* first-load screen */
 html:not(.site-loaded) body{overflow:hidden}
 html:not(.site-loaded) body::before{
-  content:"Seongsoo Shin";
+  content:"Loading";
   position:fixed;inset:0;z-index:9999;
   display:grid;place-items:center;
   background:
@@ -62,6 +62,7 @@ html:not(.site-loaded) body::after{
   animation:loaderLine .9s ease-in-out infinite alternate;
 }
 html.site-loaded body::before{opacity:0;visibility:hidden}
+html[data-lang="ko"]:not(.site-loaded) body::before{content:"로딩 중"}
 @keyframes loaderLine{from{background-size:42px 1px,180px 180px}to{background-size:108px 1px,180px 180px}}
 
 /* subtle grain only */
