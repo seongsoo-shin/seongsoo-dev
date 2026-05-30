@@ -124,7 +124,9 @@
     document.querySelectorAll('a.shot').forEach(function(a){
       a.addEventListener('click', function(e){ e.preventDefault(); openLB(a.dataset.gal, parseInt(a.dataset.i,10) || 0); });
     });
-    lb.addEventListener('click', function(e){ if (e.target === lb || e.target.classList.contains('lb-close')) closeLB(); });
+    lb.addEventListener('click', function(e){
+      if (e.target === lb || e.target === lbImg || e.target.classList.contains('lb-close')) closeLB();
+    });
     var lbp = document.querySelector('.lb-prev'); if (lbp) lbp.addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
     var lbn = document.querySelector('.lb-next'); if (lbn) lbn.addEventListener('click', function(e){ e.stopPropagation(); step(1); });
     document.addEventListener('keydown', function(e){
