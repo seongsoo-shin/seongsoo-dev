@@ -79,51 +79,9 @@ og_path = OUT / "og.png"
 img.save(og_path, "PNG")
 print("wrote", og_path, img.size)
 
-# ---------- Favicon: gold rounded square w/ S + green dot ----------
-def make_icon(size):
-    ic = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    dd = ImageDraw.Draw(ic)
-    r = max(2, int(size * 0.18))
-    dd.rounded_rectangle([0, 0, size - 1, size - 1], radius=r, fill=(15, 15, 15))
-    dd.rounded_rectangle([0, 0, size - 1, size - 1], radius=r, outline=GOLD,
-                         width=max(1, int(size * 0.06)))
-    # letter S
-    try:
-        fs = int(size * 0.62)
-        f = F(BOLD, fs)
-        bbox = dd.textbbox((0, 0), "S", font=f)
-        tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-        dd.text(((size - tw) / 2 - bbox[0], (size - th) / 2 - bbox[1] - int(size*0.02)),
-                "S", font=f, fill=GOLD2)
-    except Exception:
-        pass
-    # green status dot bottom-right
-    dr = max(2, int(size * 0.16))
-    dd.ellipse([size - dr - int(size*0.10), size - dr - int(size*0.10),
-                size - int(size*0.10), size - int(size*0.10)], fill=GOOD)
-    return ic
+# NOTE: Favicons are generated from the user's profile photo by
+# scripts/make_favicon_from_photo.py — do NOT regenerate them here, or you'll
+# overwrite the photo icons with a placeholder mark. This script only builds og.png.
+print("DONE (og only — run make_favicon_from_photo.py for favicons)")
 
-for s in (16, 32, 48, 180, 192, 512):
-    make_icon(s).save(OUT / f"icon-{s}.png")
-print("wrote PNG icons")
-
-# apple-touch (180, solid bg)
-at = Image.new("RGB", (180, 180), (15, 15, 15))
-at.paste(make_icon(180), (0, 0), make_icon(180))
-at.save(OUT / "apple-touch-icon.png")
-
-# favicon.ico (multi-size)
-ico_sizes = [(16, 16), (32, 32), (48, 48)]
-make_icon(48).save(ROOT / "favicon.ico", sizes=ico_sizes)
-print("wrote favicon.ico")
-
-# SVG favicon (crisp)
-svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="#0f0f0f" stroke="#b89856" stroke-width="3.5"/>
-  <text x="32" y="44" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" fill="#d6b673" text-anchor="middle">S</text>
-  <circle cx="50" cy="50" r="7" fill="#4ade80"/>
-</svg>
-'''
-(ROOT / "favicon.svg").write_text(svg, encoding="utf-8")
-print("wrote favicon.svg")
 print("DONE")
