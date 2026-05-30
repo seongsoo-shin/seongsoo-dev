@@ -92,6 +92,7 @@
     'nmodelin':     ['../assets/projects/nmodelin/onelook-official-1.png','../assets/projects/nmodelin/onelook-official-3.png','../assets/projects/nmodelin/onelook-official-2.png','../assets/projects/nmodelin/onelook-ss-1.jpg','../assets/projects/nmodelin/onelook-ss-2.jpg','../assets/projects/nmodelin/onelook-ss-3.jpg','../assets/teams/nmodelin/derived/20241130_131411-team.jpg','../assets/teams/nmodelin/derived/20241130_131520-team.jpg','../assets/teams/nmodelin/derived/img-2182-team.jpg','../assets/teams/nmodelin/derived/img-2141-team.jpg'],
     'nmodelin-onelook-en': ['../assets/projects/nmodelin/en/onelook-ss-1.jpg','../assets/projects/nmodelin/en/onelook-ss-2.jpg','../assets/projects/nmodelin/en/onelook-ss-3.jpg'],
     'nmodelin-onelook-ko': ['../assets/projects/nmodelin/ko/onelook-ss-1.jpg','../assets/projects/nmodelin/ko/onelook-ss-2.jpg','../assets/projects/nmodelin/ko/onelook-ss-3.jpg'],
+    'nmodelin-onelook': ['../assets/projects/nmodelin/ko/onelook-ss-1.jpg','../assets/projects/nmodelin/ko/onelook-ss-2.jpg','../assets/projects/nmodelin/ko/onelook-ss-3.jpg'],
   };
 
   // lightbox (used by detail pages)
