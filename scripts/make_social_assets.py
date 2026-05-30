@@ -90,7 +90,7 @@ d.text((PAD, 392), "A decade shipping product end to end.", font=sub_f, fill=DIM
 
 # chips (wrap to a new row if they'd collide with the photo)
 chip_f = F(REG, 26)
-chips = ["ex-CTO", "Series A", "Open to relocate", "React · Laravel · Node"]
+chips = ["ex-CTO", "Series A", "Open to relocate", "Web · Mobile · Backend"]
 x = PAD
 cy2 = 458
 row_h = 64
