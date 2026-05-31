@@ -433,7 +433,7 @@ html[data-lang="ko"] .career-intro h1{font-weight:600;letter-spacing:-0.028em}
 .signals-card dt{color:var(--ink-mute)}
 .signals-card dd{margin:0;color:var(--ink);text-align:left}
 .signals-card .em{color:var(--accent-2)}
-.profile-card-photo{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 30%;border-radius:12px;border:1px solid var(--line);margin:0 0 20px;background:var(--bg-soft);filter:saturate(.98) contrast(1.02)}
+.profile-card-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 20%;border-radius:12px;border:1px solid var(--line);margin:0 0 20px;background:var(--bg-soft);filter:saturate(.98) contrast(1.02)}
 
 /* timeline */
 .tl{display:flex;flex-direction:column}
