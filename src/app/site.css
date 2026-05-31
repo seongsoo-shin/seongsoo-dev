@@ -409,7 +409,7 @@ html[data-lang="ko"] .plist .title{font-weight:500;letter-spacing:-0.02em}
    ───────────────────────────────────────────── */
 .career-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,340px);gap:clamp(40px,5vw,72px);align-items:start}
 .career-intro .signals-card{justify-self:end;width:100%;max-width:340px}
-@media (max-width:880px){.career-intro{grid-template-columns:1fr;gap:28px}.career-intro .signals-card{justify-self:start;max-width:360px}}
+@media (max-width:880px){.career-intro{grid-template-columns:1fr;gap:28px}.career-intro .signals-card{justify-self:stretch;width:100%;max-width:100%}}
 .career-intro h1{
   margin:0 0 18px;font-size:clamp(28px,3.6vw,40px);font-weight:500;letter-spacing:-0.022em;line-height:1.18;
 }
@@ -950,8 +950,9 @@ section{border-top-color:var(--line-glass-soft)}
   .plist a{padding:14px 0}
   /* career intro: add breathing room on the sides of the body copy */
   .career-intro>div:first-child{padding-left:8px;padding-right:8px}
-  /* career intro profile card size guard */
-  .career-intro .signals-card{max-width:300px;margin-left:auto;margin-right:auto}
+  /* career intro profile card — full width, photo taller on narrow screens */
+  .career-intro .signals-card{max-width:100%;width:100%}
+  .career-intro .profile-card-photo{aspect-ratio:3/2}
   /* contact card padding */
   .contact-card{padding:26px 18px}
 }
