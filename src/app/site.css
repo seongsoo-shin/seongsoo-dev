@@ -379,6 +379,14 @@ html[data-lang="ko"] .plist .title{font-weight:500;letter-spacing:-0.02em}
   font-family:var(--mono);font-size:11px;color:var(--ink-mute);
   letter-spacing:.06em;text-transform:uppercase;text-align:right;
 }
+.plist .meta .live{
+  color:var(--good);white-space:nowrap;
+}
+.plist .meta .live::before{
+  content:"";display:inline-block;width:6px;height:6px;margin-right:5px;
+  border-radius:50%;background:var(--good);
+  box-shadow:0 0 8px rgba(74,222,128,.55);vertical-align:middle;
+}
 .plist .arrow{
   color:var(--ink-faint);font-size:18px;font-weight:300;
   transition:transform .3s cubic-bezier(.2,.7,.2,1), color .22s ease;
