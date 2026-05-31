@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>GEM Platform — Seongsoo Shin</title>
-<meta name="description" content="IoT 3D-printing platform — project by Seongsoo Shin." />
+<meta name="description" content="3D-printing content and remote-output platform — project by Seongsoo Shin." />
 <meta name="theme-color" content="#0a0a0a" />
 <link rel="canonical" href="https://seongsoo.dev/projects/gem-platform.html" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -15,14 +15,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Seongsoo Shin" />
 <meta property="og:title" content="GEM Platform — Seongsoo Shin" />
-<meta property="og:description" content="IoT 3D-printing platform — project by Seongsoo Shin." />
+<meta property="og:description" content="3D-printing content and remote-output platform — project by Seongsoo Shin." />
 <meta property="og:url" content="https://seongsoo.dev/projects/gem-platform.html" />
 <meta property="og:image" content="https://seongsoo.dev/assets/social/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="GEM Platform — Seongsoo Shin" />
-<meta name="twitter:description" content="IoT 3D-printing platform — project by Seongsoo Shin." />
+<meta name="twitter:description" content="3D-printing content and remote-output platform — project by Seongsoo Shin." />
 <meta name="twitter:image" content="https://seongsoo.dev/assets/social/og.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,8 +76,8 @@
  <div class="num">Project / 10</div>
  <h1 data-i18n-en>GEM Platform</h1>
  <h1 data-i18n-ko>GEM Platform</h1>
- <div class="role" data-i18n-en>IoT 3D-printing platform</div>
- <div class="role" data-i18n-ko>IoT 3D 프린팅 플랫폼</div>
+ <div class="role" data-i18n-en>3D model marketplace · remote-print platform</div>
+ <div class="role" data-i18n-ko>3D 모델 마켓플레이스 · 원격 출력 플랫폼</div>
  </div>
 </section>
 
@@ -91,27 +91,21 @@
  <h3 data-i18n-en>Overview</h3>
  <h3 data-i18n-ko>개요</h3>
  <div data-i18n-en class="block">
- <p>An IoT 3D-printing platform for (주)지이엠플롯폼 near Chunhae Health College.</p>
-<p>Built the operations back office, the student e-learning views and a Node.js server that talks to networked 3D printers for model orders, remote-print queues and downloads.</p>
+ <p>A 3D-printing content platform for GEM Platform, separated from the student e-learning site.</p>
+<p>I built the service flow for browsing printable models, requesting remote output and managing operational/admin views around the connected 3D-printer workflow.</p>
  </div>
  <div data-i18n-ko class="block">
- <p>(주)지이엠플롯폼의 IoT 3D 프린팅 플랫폼입니다.</p>
-<p>운영 백오피스, 학생 이러닝, 그리고 네트워크 3D 프린터와 통신하는 Node.js 서버로 모델 주문 · 원격 출력 · 다운로드를 처리합니다.</p>
+ <p>GEM Platform의 3D 프린팅 콘텐츠·원격 출력 플랫폼입니다. 학생용 이러닝 사이트와 분리해 정리했습니다.</p>
+<p>출력 가능한 모델 탐색, 원격 출력 요청, 연결된 3D 프린터 운영을 위한 서비스·관리자 흐름을 구현했습니다.</p>
  </div>
 
  <h3 data-i18n-en>What I built</h3>
  <h3 data-i18n-ko>담당 · 구현</h3>
  <ul class="bullets block" data-i18n-en>
-<li>Node.js server in IoT communication with networked 3D printers.</li>
-<li>Model order flow, remote-print queue, model download.</li>
-<li>Student e-learning views.</li>
-<li>Operations back office for printer fleet and order management.</li>
+<li>Model catalog and detail pages for printable 3D assets.</li><li>Remote-print request and download/order flow.</li><li>Operations/admin screens for managing course/order data.</li><li>Laravel + Node.js backend for service and printer-adjacent workflows.</li>
 </ul>
 <ul class="bullets block" data-i18n-ko>
-<li>네트워크 3D 프린터와 통신하는 Node.js 서버.</li>
-<li>모델 주문 흐름, 원격 출력 큐, 모델 다운로드.</li>
-<li>학생 이러닝 화면.</li>
-<li>프린터 운영과 주문 관리를 묶은 운영 백오피스.</li>
+<li>출력 가능한 3D 모델 카탈로그와 상세 화면.</li><li>원격 출력 요청과 다운로드/주문 흐름.</li><li>강의·주문 데이터를 관리하는 운영/관리자 화면.</li><li>서비스와 프린터 연동 흐름을 위한 Laravel + Node.js 백엔드.</li>
 </ul>
 
  <h3 data-i18n-en>Stack</h3>
@@ -123,27 +117,27 @@
   <div class="gallery">
  <figure class="shot-fig">
  <a href="../assets/projects/gem-platform/ss-1.jpg" class="shot" data-gal="gem-platform" data-i="0"><img src="../assets/projects/gem-platform/ss-1.jpg" alt="gem-platform screenshot 1" loading="lazy"/></a>
- <figcaption><span class="cap-n">01</span><span data-i18n-en>Home — 3D-printing course landing</span><span data-i18n-ko>메인 — 3D 프린팅 강의 랜딩</span></figcaption>
+ <figcaption><span class="cap-n">01</span><span data-i18n-en>Landing — model marketplace and 3D-printing service entry</span><span data-i18n-ko>랜딩 — 모델 마켓플레이스와 3D 프린팅 서비스 진입</span></figcaption>
  </figure>
  <figure class="shot-fig">
  <a href="../assets/projects/gem-platform/ss-2.jpg" class="shot" data-gal="gem-platform" data-i="1"><img src="../assets/projects/gem-platform/ss-2.jpg" alt="gem-platform screenshot 2" loading="lazy"/></a>
- <figcaption><span class="cap-n">02</span><span data-i18n-en>Course detail — chapter content view</span><span data-i18n-ko>강의 상세 — 챕터 콘텐츠</span></figcaption>
+ <figcaption><span class="cap-n">02</span><span data-i18n-en>Model catalog — downloadable and printable 3D assets</span><span data-i18n-ko>모델 카탈로그 — 다운로드·출력 가능한 3D 에셋</span></figcaption>
  </figure>
  <figure class="shot-fig">
  <a href="../assets/projects/gem-platform/ss-3.jpg" class="shot" data-gal="gem-platform" data-i="2"><img src="../assets/projects/gem-platform/ss-3.jpg" alt="gem-platform screenshot 3" loading="lazy"/></a>
- <figcaption><span class="cap-n">03</span><span data-i18n-en>3D model viewer — remote print-to-device control</span><span data-i18n-ko>3D 모델 뷰어 — 프린터 원격 출력 제어</span></figcaption>
+ <figcaption><span class="cap-n">03</span><span data-i18n-en>Model detail — preview, metadata and print/download actions</span><span data-i18n-ko>모델 상세 — 미리보기·메타데이터·출력/다운로드 액션</span></figcaption>
  </figure>
  <figure class="shot-fig">
  <a href="../assets/projects/gem-platform/ss-4.jpg" class="shot" data-gal="gem-platform" data-i="3"><img src="../assets/projects/gem-platform/ss-4.jpg" alt="gem-platform screenshot 4" loading="lazy"/></a>
- <figcaption><span class="cap-n">04</span><span data-i18n-en>Board — posting and Q&A</span><span data-i18n-ko>게시판 — 글쓰기 · Q&A</span></figcaption>
+ <figcaption><span class="cap-n">04</span><span data-i18n-en>Order flow — remote print request confirmation</span><span data-i18n-ko>주문 흐름 — 원격 출력 요청 확인</span></figcaption>
  </figure>
  <figure class="shot-fig">
  <a href="../assets/projects/gem-platform/ss-5.jpg" class="shot" data-gal="gem-platform" data-i="4"><img src="../assets/projects/gem-platform/ss-5.jpg" alt="gem-platform screenshot 5" loading="lazy"/></a>
- <figcaption><span class="cap-n">05</span><span data-i18n-en>Video lesson — streaming course player</span><span data-i18n-ko>동영상 강의 — 스트리밍 플레이어</span></figcaption>
+ <figcaption><span class="cap-n">05</span><span data-i18n-en>Admin — lecture/order management back office</span><span data-i18n-ko>어드민 — 강의·주문 관리 백오피스</span></figcaption>
  </figure>
  <figure class="shot-fig">
  <a href="../assets/projects/gem-platform/ss-6.jpg" class="shot" data-gal="gem-platform" data-i="5"><img src="../assets/projects/gem-platform/ss-6.jpg" alt="gem-platform screenshot 6" loading="lazy"/></a>
- <figcaption><span class="cap-n">06</span><span data-i18n-en>Admin — course management</span><span data-i18n-ko>어드민 — 강의 관리</span></figcaption>
+ <figcaption><span class="cap-n">06</span><span data-i18n-en>Admin analytics — long-form operational dashboard</span><span data-i18n-ko>어드민 분석 — 운영 현황 대시보드</span></figcaption>
  </figure>
  </div>
 
@@ -151,9 +145,9 @@
 
  <aside>
  <dl>
- <div class="row"><dt data-i18n-en>Year</dt><dt data-i18n-ko>시기</dt><dd>2018</dd></div>
- <div class="row"><dt data-i18n-en>Domain</dt><dt data-i18n-ko>도메인</dt><dd data-i18n-en>IoT · education · 3D printing</dd><dd data-i18n-ko>IoT · 교육 · 3D 프린팅</dd></div>
- <div class="row"><dt data-i18n-en>Outcome</dt><dt data-i18n-ko>성과</dt><dd data-i18n-en>Remote-print queue across networked 3D printers</dd><dd data-i18n-ko>네트워크 연결된 3D 프린터 원격 출력 큐 구축</dd></div>
+ <div class="row"><dt data-i18n-en>Year</dt><dt data-i18n-ko>시기</dt><dd>2018.04 — 2018.05</dd></div>
+ <div class="row"><dt data-i18n-en>Domain</dt><dt data-i18n-ko>도메인</dt><dd data-i18n-en>3D printing · IoT · marketplace</dd><dd data-i18n-ko>3D 프린팅 · IoT · 마켓플레이스</dd></div>
+ <div class="row"><dt data-i18n-en>Outcome</dt><dt data-i18n-ko>성과</dt><dd data-i18n-en>Printable model catalog and remote-output workflow</dd><dd data-i18n-ko>3D 모델 카탈로그와 원격 출력 흐름 구축</dd></div>
  <div class="row"><dt>Stack</dt><dd><div class="stack-row"><span class="chip">Laravel</span><span class="chip">Node.js</span><span class="chip">Blade</span></div></dd></div>
  </dl>
  </aside>
@@ -166,10 +160,10 @@
  <span class="lbl" data-i18n-ko>← 이전 · 09</span>
  <span class="ttl">Ranking GG</span>
  </a>
- <a href="bexco.html" class="next">
+ <a href="gem-elearning.html" class="next">
  <span class="lbl" data-i18n-en>Next · 11 →</span>
  <span class="lbl" data-i18n-ko>다음 · 11 →</span>
- <span class="ttl">BEXCO MICE CRM</span>
+ <span class="ttl">GEM E-Learning</span>
  </a>
  </div>
 
