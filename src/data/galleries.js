@@ -1,0 +1,21 @@
+// Auto-generated from portfolio-site/assets/js/site.js — paths rewritten ../assets/ -> /assets/
+const GALLERIES = {
+    'bexco': ['/assets/projects/bexco/ko/ss-1.png','/assets/projects/bexco/ko/ss-2.png','/assets/projects/bexco/ko/ss-3.png','/assets/projects/bexco/ko/ss-4.png'],
+    'bullida': ['/assets/projects/bullida/ko/ss-1.png','/assets/projects/bullida/ko/ss-2.png'],
+    'cashbin': ['/assets/projects/cashbin/ko/ss-1.png','/assets/projects/cashbin/ko/ss-2.png','/assets/projects/cashbin/ko/ss-3.png'],
+    'd-hub': ['/assets/projects/d-hub/ss-1.jpg','/assets/projects/d-hub/ss-2.jpg','/assets/projects/d-hub/ss-3.jpg','/assets/projects/d-hub/ss-4.jpg','/assets/projects/d-hub/ss-5.jpg','/assets/projects/d-hub/ss-6.jpg','/assets/projects/d-hub/ss-7.jpg','/assets/projects/d-hub/ss-8.jpg'],
+    'dabatruck': ['/assets/projects/dabatruck/ko/ss-1.jpg','/assets/projects/dabatruck/ko/ss-2.png','/assets/projects/dabatruck/ko/ss-3.png','/assets/projects/dabatruck/ko/ss-4.png','/assets/projects/dabatruck/ko/ss-5.png','/assets/projects/dabatruck/ko/ss-6.jpg'],
+    'dinx': ['/assets/projects/dinx/ss-1.png','/assets/projects/dinx/ss-2.png','/assets/projects/dinx/ss-3.png','/assets/projects/dinx/ss-4.png','/assets/projects/dinx/ss-5.png','/assets/projects/dinx/ss-6.png','/assets/projects/dinx/ss-7.png'],
+    'gem-platform': ['/assets/projects/gem-platform/ss-1.jpg','/assets/projects/gem-platform/ss-2.jpg','/assets/projects/gem-platform/ss-3.jpg','/assets/projects/gem-platform/ss-4.jpg','/assets/projects/gem-platform/ss-5.jpg','/assets/projects/gem-platform/ss-6.jpg'],
+    'gem-elearning': ['/assets/projects/gem-elearning/ss-1.jpg','/assets/projects/gem-elearning/ss-2.jpg','/assets/projects/gem-elearning/ss-3.jpg','/assets/projects/gem-elearning/ss-4.jpg','/assets/projects/gem-elearning/ss-5.jpg','/assets/projects/gem-elearning/ss-6.jpg','/assets/projects/gem-elearning/ss-7.jpg','/assets/projects/gem-elearning/ss-8.jpg'],
+    'neurodio': ['/assets/projects/neurodio/ss-1.jpg','/assets/projects/neurodio/ss-2.jpg','/assets/projects/neurodio/ss-3.jpg','/assets/projects/neurodio/ss-4.jpg','/assets/projects/neurodio/ss-5.jpg'],
+    'nmodelin': ['/assets/projects/nmodelin/onelook-official-1.png','/assets/projects/nmodelin/onelook-official-3.png','/assets/projects/nmodelin/onelook-official-2.png','/assets/teams/nmodelin/derived/20241130_131411-team.jpg','/assets/teams/nmodelin/derived/20241130_131520-team.jpg','/assets/teams/nmodelin/derived/img-2182-team.jpg','/assets/teams/nmodelin/derived/img-2141-team.jpg'],
+    'nmodelin-onelook': ['/assets/projects/nmodelin/ko/onelook-ss-1.jpg','/assets/projects/nmodelin/ko/onelook-ss-2.jpg','/assets/projects/nmodelin/ko/onelook-ss-3.jpg'],
+    'lesoleil-planterior': ['/assets/projects/lesoleil-planterior/ss-1.png','/assets/projects/lesoleil-planterior/ss-2.png','/assets/projects/lesoleil-planterior/ss-3.png','/assets/projects/lesoleil-planterior/ss-4.png','/assets/projects/lesoleil-planterior/ss-5.png','/assets/projects/lesoleil-planterior/ss-6.png','/assets/projects/lesoleil-planterior/ss-7.png'],
+    'ranking-gg': ['/assets/projects/ranking-gg/ko/ss-1.png','/assets/projects/ranking-gg/ko/ss-2.png','/assets/projects/ranking-gg/ko/ss-3.png','/assets/projects/ranking-gg/ko/ss-4.png','/assets/projects/ranking-gg/ko/ss-5.png','/assets/projects/ranking-gg/ko/ss-6.png'],
+    's-team': ['/assets/projects/s-team/ko/ss-1.png','/assets/projects/s-team/ko/ss-2.png','/assets/projects/s-team/ko/ss-3.png','/assets/projects/s-team/ko/ss-4.png','/assets/projects/s-team/ko/ss-5.png','/assets/projects/s-team/ko/ss-6.png'],
+    'ulsan-bus': ['/assets/projects/ulsan-bus/ss-1.png','/assets/projects/ulsan-bus/ss-2.png','/assets/projects/ulsan-bus/ss-3.png'],
+    'unibook': ['/assets/projects/unibook/ss-1.jpg','/assets/projects/unibook/ss-2.jpg','/assets/projects/unibook/ss-3.jpg','/assets/projects/unibook/ss-4.jpg','/assets/projects/unibook/ss-5.jpg','/assets/projects/unibook/ss-6.jpg','/assets/projects/unibook/ss-7.jpg','/assets/projects/unibook/ss-8.jpg'],
+  };
+
+export default GALLERIES;
