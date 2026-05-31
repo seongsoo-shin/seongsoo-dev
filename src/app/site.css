@@ -469,6 +469,7 @@ html[data-lang="ko"] .tl-what strong{font-weight:600;font-size:15.5px}
 }
 .cap ul{margin:0;padding:0;list-style:none}
 .cap li{font-size:13px;color:var(--ink-dim);padding:3px 0;line-height:1.55}
+.cap p{font-size:13px;color:var(--ink-dim);margin:0;line-height:1.6}
 
 /* ─────────────────────────────────────────────
    PROJECT DETAIL PAGE
