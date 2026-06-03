@@ -280,6 +280,8 @@ html[data-lang="ko"] .sec-head h2{font-weight:600;letter-spacing:-0.024em}
   letter-spacing:.12em;text-transform:uppercase;flex-shrink:0;
 }
 
+a.tag{text-decoration:none;}
+a.tag:hover{color:var(--accent);}
 /* ─────────── buttons ─────────── */
 .btn{
   display:inline-flex;align-items:center;gap:10px;
