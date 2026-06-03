@@ -482,6 +482,14 @@ html[data-lang="ko"] .plist .title{font-weight:500;letter-spacing:-0.02em}
 }
 .intro-social a:hover{color:var(--accent-2)}
 
+/* intro aside — human signal line */
+.intro-aside{
+  margin:10px 0 0;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;
+  color:rgba(255,255,255,.38);
+  line-height:1.5;
+}
+
 /* ─────────────────────────────────────────────
    CAREER PAGE
    ───────────────────────────────────────────── */
@@ -494,6 +502,10 @@ html[data-lang="ko"] .plist .title{font-weight:500;letter-spacing:-0.02em}
 html[data-lang="ko"] .career-intro h1{font-weight:600;letter-spacing:-0.028em}
 .career-intro p{margin:0 0 14px;color:var(--ink-dim);font-size:15px;line-height:1.75;max-width:55ch}
 .career-intro p strong{color:var(--ink);font-weight:500}
+
+/* positioning callout section */
+.positioning-callout{padding:clamp(32px,4vw,52px) 0;border-top:1px solid var(--line)}
+.positioning-callout .hero-quote-wrap{margin-top:0}
 
 /* hero positioning quote */
 .hero-quote-wrap{margin-top:24px}
