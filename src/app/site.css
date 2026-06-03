@@ -410,6 +410,31 @@ html[data-lang="ko"] .plist .title{font-weight:500;letter-spacing:-0.02em}
 /* small index bottom links */
 .idx-cta{margin-top:48px;display:flex;gap:14px;flex-wrap:wrap}
 
+/* ── INDEX: KPI chips row ── */
+.intro-kpi{
+  display:flex;flex-wrap:wrap;gap:7px;margin-top:28px;
+}
+.kpi-chip{
+  font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  color:var(--ink-dim);background:var(--bg-soft);
+  border:1px solid var(--line);border-radius:999px;
+  padding:5px 12px;white-space:nowrap;
+}
+.kpi-chip strong{color:var(--accent-2);font-weight:500}
+.kpi-chip.accent{background:rgba(184,152,86,.06);border-color:rgba(184,152,86,.28);color:var(--accent-2)}
+
+/* ── INDEX: social/contact inline row ── */
+.intro-social{
+  display:flex;flex-wrap:wrap;gap:18px;
+  margin-top:14px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+}
+.intro-social a{
+  color:var(--ink-mute);border:none;
+  transition:color .18s ease;
+}
+.intro-social a:hover{color:var(--accent-2)}
+
 /* ─────────────────────────────────────────────
    CAREER PAGE
    ───────────────────────────────────────────── */
@@ -422,6 +447,20 @@ html[data-lang="ko"] .plist .title{font-weight:500;letter-spacing:-0.02em}
 html[data-lang="ko"] .career-intro h1{font-weight:600;letter-spacing:-0.028em}
 .career-intro p{margin:0 0 14px;color:var(--ink-dim);font-size:15px;line-height:1.75;max-width:55ch}
 .career-intro p strong{color:var(--ink);font-weight:500}
+
+/* hero positioning quote */
+.hero-quote-wrap{margin-top:24px}
+.hero-quote{
+  margin:0;padding:14px 18px;
+  border-left:2px solid var(--accent);
+  background:rgba(184,152,86,.04);
+  border-radius:0 6px 6px 0;
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(14.5px,1.6vw,17px);
+  color:var(--ink-dim);line-height:1.6;
+  max-width:56ch;
+}
+html[data-lang="ko"] .hero-quote{font-family:var(--sans-kr);font-style:normal;font-size:clamp(13.5px,1.4vw,15.5px)}
 
 .signals-card{
   background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
