@@ -173,13 +173,15 @@ html[data-lang="ko"] nav.nav a span[data-i18n-ko]{display:none!important}
 
 /* ─────────── header ─────────── */
 header.top{
-  position:sticky;top:0;z-index:30;
+  position:fixed;top:0;left:0;right:0;z-index:30;
   backdrop-filter:blur(14px) saturate(140%);
   -webkit-backdrop-filter:blur(14px) saturate(140%);
   background:rgba(10,10,10,.78);
   border-bottom:1px solid var(--line-soft);
   padding-top:env(safe-area-inset-top);
 }
+/* body offset — compensates for fixed header (~52px + safe-area) */
+body{padding-top:calc(52px + env(safe-area-inset-top));}
 .top-row{display:flex;align-items:center;justify-content:space-between;padding-block:16px;gap:18px}
 .brand{
   display:flex;align-items:center;gap:11px;font-family:var(--mono);font-size:12.5px;
