@@ -143,6 +143,15 @@ html[data-lang="ko"] li[data-i18n-ko]{display:list-item!important}
 html[data-lang="ko"] nav.nav a span[data-i18n-en]{display:inline!important}
 html[data-lang="ko"] nav.nav a span[data-i18n-ko]{display:none!important}
 
+/* ─────────── scroll progress bar ─────────── */
+#scroll-progress{
+  position:fixed;top:0;left:0;z-index:9999;
+  height:2px;width:0%;
+  background:var(--accent,#e8e8e8);
+  transition:width .08s linear;
+  pointer-events:none;
+}
+
 /* ─────────── header ─────────── */
 header.top{
   position:sticky;top:0;z-index:30;

@@ -172,6 +172,18 @@ export default function SiteRuntime() {
       cleanups.push(() => document.removeEventListener('keydown', onKey));
     }
 
+    // ───── scroll progress bar ─────
+    const bar = document.getElementById('scroll-progress');
+    function updateProgress() {
+      if (!bar) return;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    cleanups.push(() => window.removeEventListener('scroll', updateProgress));
+
     // ───── reveal ─────
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver(
