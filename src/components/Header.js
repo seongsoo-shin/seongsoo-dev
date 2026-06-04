@@ -28,7 +28,7 @@ export default function Header({ active }) {
             <span data-i18n-en="">Projects</span>
             <span data-i18n-ko="">프로젝트</span>
           </Link>
-          <Link href="/contact/" className={cls('contact')}>
+          <Link href="/#contact" className={cls('contact')}>
             <span className="num">02</span>
             <span data-i18n-en="">Contact</span>
             <span data-i18n-ko="">연락</span>
