@@ -29,8 +29,8 @@ export const FooterLinks = {
       <Link href="/" data-i18n-en="">← Index</Link>
       <Link href="/" data-i18n-ko="">← 인덱스</Link>
       &nbsp;·&nbsp;
-      <Link href="/projects/" data-i18n-en="">Projects →</Link>
-      <Link href="/projects/" data-i18n-ko="">프로젝트 →</Link>
+      <Link href="/#projects" data-i18n-en="">Projects →</Link>
+      <Link href="/#projects" data-i18n-ko="">프로젝트 →</Link>
     </>
   ),
   projects: (
@@ -38,14 +38,14 @@ export const FooterLinks = {
       <Link href="/" data-i18n-en="">← Index</Link>
       <Link href="/" data-i18n-ko="">← 인덱스</Link>
       &nbsp;·&nbsp;
-      <Link href="/contact/" data-i18n-en="">Contact →</Link>
-      <Link href="/contact/" data-i18n-ko="">연락 →</Link>
+      <Link href="/#contact" data-i18n-en="">Contact →</Link>
+      <Link href="/#contact" data-i18n-ko="">연락 →</Link>
     </>
   ),
   contact: (
     <>
-      <Link href="/projects/" data-i18n-en="">← Projects</Link>
-      <Link href="/projects/" data-i18n-ko="">← 프로젝트</Link>
+      <Link href="/#projects" data-i18n-en="">← Projects</Link>
+      <Link href="/#projects" data-i18n-ko="">← 프로젝트</Link>
       &nbsp;·&nbsp;
       <Link href="/" data-i18n-en="">Index ↑</Link>
       <Link href="/" data-i18n-ko="">인덱스 ↑</Link>
@@ -53,11 +53,11 @@ export const FooterLinks = {
   ),
   project: (
     <>
-      <Link href="/projects/" data-i18n-en="">← All projects</Link>
-      <Link href="/projects/" data-i18n-ko="">← 전체 프로젝트</Link>
+      <Link href="/#projects" data-i18n-en="">← All projects</Link>
+      <Link href="/#projects" data-i18n-ko="">← 전체 프로젝트</Link>
       &nbsp;·&nbsp;
-      <Link href="/contact/" data-i18n-en="">Contact →</Link>
-      <Link href="/contact/" data-i18n-ko="">연락 →</Link>
+      <Link href="/#contact" data-i18n-en="">Contact →</Link>
+      <Link href="/#contact" data-i18n-ko="">연락 →</Link>
     </>
   ),
 };
