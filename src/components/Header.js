@@ -18,11 +18,6 @@ export default function Header({ active }) {
             <span data-i18n-en="">Available from March 2027</span>
             <span data-i18n-ko="">2027년 3월부터 합류 가능</span>
           </div>
-          <Link href="/" className={cls('index')}>
-            <span className="num">00</span>
-            <span data-i18n-en="">Index</span>
-            <span data-i18n-ko="">인덱스</span>
-          </Link>
           <span className="lang-toggle" role="group" aria-label="Language">
             <button type="button" data-set-lang="en" className="active" title="English">
               EN
