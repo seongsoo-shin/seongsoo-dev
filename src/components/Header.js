@@ -23,11 +23,6 @@ export default function Header({ active }) {
             <span data-i18n-en="">Index</span>
             <span data-i18n-ko="">인덱스</span>
           </Link>
-          <Link href="/#contact" className={cls('contact')}>
-            <span className="num">01</span>
-            <span data-i18n-en="">Contact</span>
-            <span data-i18n-ko="">연락</span>
-          </Link>
           <span className="lang-toggle" role="group" aria-label="Language">
             <button type="button" data-set-lang="en" className="active" title="English">
               EN

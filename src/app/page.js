@@ -8,7 +8,7 @@ const page = content.index;
 export const metadata = buildMetadata(page.meta);
 
 // Merge the projects section into the index page so it flows as one scroll.
-const combinedHtml = page.main + '\n' + content.projects.main;
+const combinedHtml = page.main + '\n' + content.projects.main + '\n' + content.contact.main;
 
 export default function Page() {
   return (
