@@ -64,11 +64,25 @@ export default function ProjectModal({ details }) {
       });
     }
 
+    function attachNavLinks() {
+      body.querySelectorAll('.proj-nav a').forEach((a) => {
+        a.addEventListener('click', (e) => {
+          const href  = a.getAttribute('href') || '';
+          const match = href.match(/\/projects\/([^/]+)\//);
+          if (!match || !details[match[1]]) return;
+          e.preventDefault();
+          e.stopPropagation();
+          openModal(match[1]);
+        });
+      });
+    }
+
     function openModal(slug) {
       const proj = details[slug];
       if (!proj) return;
       body.innerHTML = proj.main;
       attachShots();
+      attachNavLinks();
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
