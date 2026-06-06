@@ -65,14 +65,37 @@ export default function ProjectModal({ details }) {
     }
 
     function attachNavLinks() {
-      body.querySelectorAll('.proj-nav a').forEach((a) => {
+      body.querySelectorAll('.proj-nav a, .crumb a').forEach((a) => {
         a.addEventListener('click', (e) => {
-          const href  = a.getAttribute('href') || '';
-          const match = href.match(/\/projects\/([^/]+)\//);
-          if (!match || !details[match[1]]) return;
-          e.preventDefault();
-          e.stopPropagation();
-          openModal(match[1]);
+          const href = a.getAttribute('href') || '';
+
+          // 다른 프로젝트 상세 → 모달 교체
+          const projMatch = href.match(/\/projects\/([^/]+)\//);
+          if (projMatch && details[projMatch[1]]) {
+            e.preventDefault();
+            e.stopPropagation();
+            openModal(projMatch[1]);
+            return;
+          }
+
+          // 프로젝트 목록 / 섹션 앵커 / 홈 → 모달 닫고 이동
+          const isSection = href === '/projects/' || href === '/' || href.startsWith('/#');
+          if (isSection) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeModal();
+            if (href === '/projects/' || href === '/') {
+              // index 페이지 해당 섹션으로
+              const anchor = href === '/projects/' ? '#projects' : '#top';
+              window.location.hash = anchor;
+            } else {
+              // /#contact, /#projects 등 해시 앵커
+              const hash = href.replace(/^\//, '');
+              const target = document.querySelector(hash);
+              if (target) target.scrollIntoView({ behavior: 'smooth' });
+              else window.location.href = href;
+            }
+          }
         });
       });
     }
