@@ -100,6 +100,24 @@ export default function ProjectModal({ details }) {
       });
     }
 
+    function lockBodyScroll() {
+      const scrollY = window.scrollY;
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+      document.body.dataset.scrollY = scrollY;
+    }
+    function unlockBodyScroll() {
+      const scrollY = parseInt(document.body.dataset.scrollY || '0', 10);
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      delete document.body.dataset.scrollY;
+      window.scrollTo(0, scrollY);
+    }
+
     function openModal(slug) {
       const proj = details[slug];
       if (!proj) return;
@@ -110,7 +128,7 @@ export default function ProjectModal({ details }) {
       attachNavLinks();
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      lockBodyScroll();
       body.scrollTop = 0;
       requestAnimationFrame(() => {
         body.scrollTop = 0;
@@ -122,7 +140,7 @@ export default function ProjectModal({ details }) {
       closeLB();
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+      unlockBodyScroll();
       body.innerHTML = '';
     }
 
@@ -170,7 +188,14 @@ export default function ProjectModal({ details }) {
     if (lbImg) { lbImg.src = ''; }
     if (modal) { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); }
     if (body)  { body.innerHTML = ''; }
+    // iOS Safari unlock
+    const scrollY = parseInt(document.body.dataset.scrollY || '0', 10);
     document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    delete document.body.dataset.scrollY;
+    window.scrollTo(0, scrollY);
   }
 
   return (
