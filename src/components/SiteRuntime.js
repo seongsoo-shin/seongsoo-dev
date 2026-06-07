@@ -242,6 +242,43 @@ export default function SiteRuntime() {
       cleanups.push(() => io.disconnect());
     }
 
+    // ───── copy email to clipboard ─────
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    let toastTimer = null;
+    function showToast(msg) {
+      let toast = document.getElementById('copy-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'copy-toast';
+        toast.className = 'copy-toast';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+    const emailHandlers = [];
+    emailLinks.forEach((a) => {
+      const h = (e) => {
+        const email = (a.getAttribute('href') || '').replace('mailto:', '');
+        if (!email) return;
+        e.preventDefault();
+        navigator.clipboard.writeText(email).then(() => {
+          showToast('📋 ' + email + ' copied');
+        }).catch(() => {
+          // fallback: 그냥 mailto 열기
+          window.location.href = a.getAttribute('href');
+        });
+      };
+      a.addEventListener('click', h);
+      emailHandlers.push([a, h]);
+    });
+    cleanups.push(() => {
+      emailHandlers.forEach(([a, h]) => a.removeEventListener('click', h));
+      clearTimeout(toastTimer);
+    });
+
     // ───── first-load screen ─────
     const loadStartedAt =
       window.performance && performance.now ? performance.now() : Date.now();
