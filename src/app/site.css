@@ -871,10 +871,10 @@ html[data-lang="ko"] .contact-card h3{font-weight:600;letter-spacing:-0.025em}
 .contact-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
 .contact-portrait{display:block;width:200px;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid var(--line-soft);background:var(--bg-soft);filter:saturate(.98) contrast(1.02)}
 @media (max-width:760px){.contact-lead{grid-template-columns:1fr}.contact-portrait{width:min(200px,100%);margin:0 auto}}
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line-glass);border-radius:8px;overflow:hidden;margin-bottom:28px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line-glass);border-radius:8px;overflow:hidden;margin-bottom:22px}
 .contact-grid > div{display:flex;flex-direction:column;gap:4px;padding:16px;border-right:1px solid var(--line-glass);background:rgba(255,255,255,.012)}
 .contact-grid > div:last-child{border-right:0}
-@media (max-width:680px){.contact-grid{grid-template-columns:repeat(2,1fr)}.contact-grid > div{border-bottom:1px solid var(--line-glass)}.contact-grid > div:nth-child(2n){border-right:0}.contact-grid > div:nth-last-child(-n+2){border-bottom:0}}
+@media (max-width:680px){.contact-grid{grid-template-columns:1fr}.contact-grid > div{border-right:0;border-bottom:1px solid var(--line-glass)}.contact-grid > div:last-child{border-bottom:0}}
 @media (max-width:420px){.contact-grid{grid-template-columns:1fr}.contact-grid > div{border-right:0;border-bottom:1px solid var(--line-glass)}.contact-grid > div:last-child{border-bottom:0}}
 .contact-grid .k{display:block}
 .contact-grid .k{
