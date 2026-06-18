@@ -18,13 +18,21 @@ function lockBodyScroll() {
 function unlockBodyScroll() {
   if (!document.body.dataset.scrollLocked) return;
   const scrollY = parseInt(document.body.dataset.scrollY || '0', 10);
+  // scroll-behavior:smooth 가 걸려 있으면 scrollTo도 애니메이팅됨.
+  // position:fixed 해제와 scrollTo를 같은 프레임에서 처리하고
+  // html scroll-behavior를 잠깐 auto로 눌러서 즉시 복원.
+  const html = document.documentElement;
+  const prev = html.style.scrollBehavior;
+  html.style.scrollBehavior = 'auto';
   document.body.style.overflow = '';
   document.body.style.position = '';
   document.body.style.top = '';
   document.body.style.width = '';
   delete document.body.dataset.scrollY;
   delete document.body.dataset.scrollLocked;
-  window.scrollTo(0, scrollY);
+  window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' });
+  // 다음 프레임에서 원래 scroll-behavior 복원
+  requestAnimationFrame(() => { html.style.scrollBehavior = prev; });
 }
 
 // ── focus trap ───────────────────────────────────────────────────────────────
