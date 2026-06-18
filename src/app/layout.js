@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
         />
         <script dangerouslySetInnerHTML={{ __html: langBootstrap }} />
       </head>
-      <body id="top"><div id="scroll-progress" aria-hidden="true"><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span></div><div id="modal-progress" aria-hidden="true"></div>{children}</body>
+      <body id="top"><div id="scroll-progress" aria-hidden="true"><span class="seg" data-label-en="Intro" data-label-ko="소개"></span><span class="seg" data-label-en="Profile" data-label-ko="프로필"></span><span class="seg" data-label-en="Stack" data-label-ko="스택"></span><span class="seg" data-label-en="Projects" data-label-ko="프로젝트"></span><span class="seg" data-label-en="Timeline" data-label-ko="경력"></span><span class="seg" data-label-en="Contact" data-label-ko="연락처"></span></div><div id="modal-progress" aria-hidden="true"></div>{children}</body>
     </html>
   );
 }
