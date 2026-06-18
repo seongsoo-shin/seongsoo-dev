@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
         />
         <script dangerouslySetInnerHTML={{ __html: langBootstrap }} />
       </head>
-      <body id="top"><div id="scroll-progress" aria-hidden="true"><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span></div>{children}</body>
+      <body id="top"><div id="scroll-progress" aria-hidden="true"><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span></div><div id="modal-progress" aria-hidden="true"></div>{children}</body>
     </html>
   );
 }

@@ -183,6 +183,7 @@ export default function SiteRuntime() {
       ).filter(Boolean);
     }
     function updateProgress() {
+      if (document.body.classList.contains('modal-open')) return;
       const sections = getSections();
       if (!sections.length || !segs.length) return;
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -212,6 +213,41 @@ export default function SiteRuntime() {
     cleanups.push(() => {
       window.removeEventListener('scroll', updateProgress);
       window.removeEventListener('resize', updateProgress);
+    });
+
+    // ───── modal reading progress ─────
+    const modalBar = document.getElementById('modal-progress');
+    function updateModalProgress(modalBody) {
+      if (!modalBar || !modalBody) return;
+      const { scrollTop, scrollHeight, clientHeight } = modalBody;
+      const max = scrollHeight - clientHeight;
+      const pct = max > 0 ? (scrollTop / max) * 100 : 100;
+      modalBar.style.width = pct + '%';
+    }
+    const onModalOpen = (e) => {
+      const modalBody = e.detail && e.detail.bodyEl;
+      document.body.classList.add('modal-open');
+      if (modalBar) modalBar.style.width = '0%';
+      if (modalBody) {
+        const onScroll = () => updateModalProgress(modalBody);
+        modalBody._progressHandler = onScroll;
+        modalBody.addEventListener('scroll', onScroll, { passive: true });
+      }
+    };
+    const onModalClose = (e) => {
+      const modalBody = e.detail && e.detail.bodyEl;
+      document.body.classList.remove('modal-open');
+      if (modalBar) modalBar.style.width = '0%';
+      if (modalBody && modalBody._progressHandler) {
+        modalBody.removeEventListener('scroll', modalBody._progressHandler);
+        delete modalBody._progressHandler;
+      }
+    };
+    document.addEventListener('modalopen', onModalOpen);
+    document.addEventListener('modalclose', onModalClose);
+    cleanups.push(() => {
+      document.removeEventListener('modalopen', onModalOpen);
+      document.removeEventListener('modalclose', onModalClose);
     });
 
     // ───── reveal ─────

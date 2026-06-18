@@ -150,10 +150,11 @@ export default function ProjectModal({ details }) {
       const proj = details[slug];
       if (!proj) return;
 
-      // 처음 열 때만 포커스 저장 + body lock
+      // 처음 열 때만 포커스 저장 + body lock + modalopen 이벤트
       if (!modal.classList.contains('open')) {
         prevFocus.current = document.activeElement;
         lockBodyScroll();
+        document.dispatchEvent(new CustomEvent('modalopen', { detail: { bodyEl: body } }));
       }
 
       // 콘텐츠 교체 + 스크롤 리셋
@@ -180,6 +181,7 @@ export default function ProjectModal({ details }) {
       closeLB();
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
+      document.dispatchEvent(new CustomEvent('modalclose', { detail: { bodyEl: body } }));
       unlockBodyScroll();
       body.innerHTML = '';
       // 포커스 복원
@@ -242,6 +244,7 @@ export default function ProjectModal({ details }) {
     if (lb)    { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); }
     if (lbImg) { lbImg.src = ''; }
     if (modal) { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); }
+    document.dispatchEvent(new CustomEvent('modalclose', { detail: { bodyEl: body } }));
     if (body)  { body.innerHTML = ''; }
     unlockBodyScroll();
     if (prevFocus.current && typeof prevFocus.current.focus === 'function') {

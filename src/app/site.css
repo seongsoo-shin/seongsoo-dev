@@ -149,7 +149,9 @@ html[data-lang="ko"] nav.nav a span[data-i18n-ko]{display:none!important}
   height:3px;width:100%;
   display:flex;
   pointer-events:none;
+  transition:opacity .15s ease;
 }
+body.modal-open #scroll-progress{ opacity:0; }
 #scroll-progress .seg{
   flex:1;
   height:100%;
@@ -170,6 +172,17 @@ html[data-lang="ko"] nav.nav a span[data-i18n-ko]{display:none!important}
 }
 #scroll-progress .seg.done::after{ transform:scaleX(1); }
 #scroll-progress .seg.active::after{ transform:scaleX(var(--p,0)); }
+
+/* modal reading progress — single fill bar */
+#modal-progress{
+  position:fixed;top:0;left:0;z-index:9999;
+  height:3px;width:0%;
+  background:var(--accent,#b89856);
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .15s ease, width .06s linear;
+}
+body.modal-open #modal-progress{ opacity:1; }
 
 /* ─────────── header ─────────── */
 header.top{
