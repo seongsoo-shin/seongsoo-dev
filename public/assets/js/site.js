@@ -72,7 +72,6 @@
     'lesoleil-planterior': ['../assets/projects/lesoleil-planterior/ss-1.png'],
     'ranking-gg': ['../assets/projects/ranking-gg/ko/ss-1.png','../assets/projects/ranking-gg/ko/ss-2.png','../assets/projects/ranking-gg/ko/ss-3.png','../assets/projects/ranking-gg/ko/ss-4.png','../assets/projects/ranking-gg/ko/ss-5.png','../assets/projects/ranking-gg/ko/ss-6.png'],
     's-team': ['../assets/projects/s-team/ko/ss-1.png','../assets/projects/s-team/ko/ss-2.png','../assets/projects/s-team/ko/ss-3.png','../assets/projects/s-team/ko/ss-4.png','../assets/projects/s-team/ko/ss-5.png','../assets/projects/s-team/ko/ss-6.png'],
-    'ulsan-bus': ['../assets/projects/ulsan-bus/ss-1.png','../assets/projects/ulsan-bus/ss-2.png','../assets/projects/ulsan-bus/ss-3.png'],
     'unibook': ['../assets/projects/unibook/ss-1.jpg','../assets/projects/unibook/ss-2.jpg','../assets/projects/unibook/ss-3.jpg','../assets/projects/unibook/ss-4.jpg','../assets/projects/unibook/ss-5.jpg','../assets/projects/unibook/ss-6.jpg','../assets/projects/unibook/ss-7.jpg','../assets/projects/unibook/ss-8.jpg'],
   };
 

@@ -2,7 +2,7 @@
 
 [![Live](https://img.shields.io/badge/Live-seongsoo.dev-4ade80?style=for-the-badge&logo=vercel&logoColor=white)](https://seongsoo.dev)
 
-Next.js (App Router, **static export**) portfolio site for Seongsoo Shin — full-stack engineer, ex-CTO, 17 projects across a decade.
+Next.js (App Router, **static export**) portfolio site for Seongsoo Shin — full-stack engineer, ex-CTO, 16 projects across a decade.
 Bilingual KR/EN, dark editorial design, all projects open as modals on the index page.
 
 ## Projects
@@ -25,7 +25,6 @@ Bilingual KR/EN, dark editorial design, all projects open as modals on the index
 | 14 | [GEM E-Learning](https://seongsoo.dev/?modal=gem-elearning) | 2018 | 3D-printing course site |
 | 15 | [BEXCO MICE CRM](https://seongsoo.dev/?modal=bexco) | 2017–2018 | CRM · 100k+ contacts |
 | 16 | [Cashbin](https://seongsoo.dev/?modal=cashbin) | 2017 | IoT recycling rewards |
-| 17 | [Ulsan Bus](https://seongsoo.dev/?modal=ulsan-bus) | 2014 | Real-time bus locator |
 
 ## Why static export
 The site has no server runtime — `next.config.mjs` uses `output: 'export'`, so
